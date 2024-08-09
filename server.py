@@ -5,13 +5,13 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 def get_db_connection():
-    conn = psycopg2.connect(host='db',
-                            database='movies',
-                            user='postgres',
-                            password='Postgres2023')
+    conn = psycopg2.connect(host='dpg-cqr0h9lsvqrc73fodmp0-a.oregon-postgres.render.com',
+                            database='devops_lab12',
+                            user='devops_lab12_user',
+                            password='Is0kWS6lNqq8TzQd7Tn9PHWESB0GIvW7')
     return conn
 
-
+    
 @app.route('/')
 def index():
     conn = get_db_connection()
